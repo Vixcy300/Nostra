@@ -156,6 +156,8 @@ input:focus { outline: none; }
     color: #1D232C;
     text-decoration: none;
     display: inline-block;
+    background-color: white; /* FIXED: Added white background */
+    border-radius: 4px;      /* FIXED: Added slightly rounded corners */
 }
 
 .slider-nav-button {
