@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Collections: filters + product grid; products rendered by script.js -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Collections – Nostra | Browse Fashion by Occasion, Color & More</title>
+    <meta name="description" content="Browse Nostra's fashion collection. Filter by occasion (summer, party, beach), color (red, blue, white, green), and arrival. Search and find your perfect style.">
+    <meta name="keywords" content="Nostra collections, fashion, summer, party, beach, filter, search">
+    <meta name="robots" content="index, follow">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Collections – Nostra">
+    <meta property="og:description" content="Browse and filter our fashion collection by occasion, color, and more.">
+    <link rel="icon" type="image/svg+xml" href="./assets/favicon.svg">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gabarito:wght@400..900&family=Italiana&family=Italianno&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer">
+</head>
+
+<body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    <header class="header">
+        <section class="offer-banner" id="offer-banner" aria-label="Promotional offer">
+            <p class="offer-banner__text">Sign up and <strong>get 20% off</strong> your first order</p>
+            <button type="button" class="offer-banner__close" id="offer-close" aria-label="Dismiss offer">
+                <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+            </button>
+        </section>
+
+        <nav class="nav" aria-label="Main navigation">
+            <a href="./index.html" class="nav__logo">Nostra</a>
+            <ul class="nav__list" role="list">
+                <li class="nav__item"><a class="nav__link" href="./index.html">Home</a></li>
+                <li class="nav__item"><a class="nav__link" href="./index.html#new-arrival">New Arrival</a></li>
+                <li class="nav__item"><a class="nav__link" href="./index.html#most-wanted">Most Wanted</a></li>
+                <li class="nav__item"><a class="nav__link" href="./collections.html">Collections</a></li>
+                <li class="nav__item"><a class="nav__link" href="./contact.html">Contact Us</a></li>
+            </ul>
+            <button type="button" class="nav__menu-toggle" id="side-navbar-activate" aria-label="Open menu" aria-expanded="false" aria-controls="drawer-nav">
+                <i class="fa-solid fa-bars" aria-hidden="true"></i>
+            </button>
+        </nav>
+    </header>
+
+    <nav id="drawer-nav" class="drawer" aria-label="Mobile navigation" aria-hidden="true">
+        <button type="button" class="drawer__close" id="side-navbar-close" aria-label="Close menu">
+            <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+        </button>
+        <ul class="drawer__list" role="list">
+            <li class="drawer__item"><a class="drawer__link" href="./index.html">Home</a></li>
+            <li class="drawer__item"><a class="drawer__link" href="./index.html#new-arrival">New Arrival</a></li>
+            <li class="drawer__item"><a class="drawer__link" href="./index.html#most-wanted">Most Wanted</a></li>
+            <li class="drawer__item"><a class="drawer__link" href="./collections.html">Collections</a></li>
+            <li class="drawer__item"><a class="drawer__link" href="./contact.html">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <main id="main-content">
+        <h1 class="visually-hidden">Nostra Collections – Browse and filter our fashion</h1>
+        <!-- catalog: filters + products; JS populates .catalog__product-list -->
+        <div class="catalog">
+            <aside class="catalog__filters" aria-label="Filter products">
+                <fieldset class="filter-group">
+                    <legend class="filter-group__title">Occasion</legend>
+                    <ul class="filter-group__list" role="list">
+                        <li class="filter-group__item">
+                            <label class="filter-group__label"><input type="checkbox" name="occasion" value="summer"> Summer</label>
+                        </li>
+                        <li class="filter-group__item">
+                            <label class="filter-group__label"><input type="checkbox" name="occasion" value="party"> Party</label>
+                        </li>
+                        <li class="filter-group__item">
+                            <label class="filter-group__label"><input type="checkbox" name="occasion" value="beach"> Beach</label>
+                        </li>
+                    </ul>
+                </fieldset>
+                <fieldset class="filter-group">
+                    <legend class="filter-group__title">Colors</legend>
+                    <ul class="filter-group__list" role="list">
+                        <li class="filter-group__item">
+                            <label class="filter-group__label"><input type="checkbox" name="color" value="red"> Red</label>
+                        </li>
+                        <li class="filter-group__item">
+                            <label class="filter-group__label"><input type="checkbox" name="color" value="blue"> Blue</label>
+                        </li>
+                        <li class="filter-group__item">
+                            <label class="filter-group__label"><input type="checkbox" name="color" value="white"> White</label>
+                        </li>
+                        <li class="filter-group__item">
+                            <label class="filter-group__label"><input type="checkbox" name="color" value="green"> Green</label>
+                        </li>
+                    </ul>
+                </fieldset>
+                <fieldset class="filter-group">
+                    <legend class="filter-group__title">Arrivals</legend>
+                    <ul class="filter-group__list" role="list">
+                        <li class="filter-group__item">
+                            <label class="filter-group__label"><input type="checkbox" name="arrival" value="new"> New</label>
+                        </li>
+                        <li class="filter-group__item">
+                            <label class="filter-group__label"><input type="checkbox" name="arrival" value="old"> Old</label>
+                        </li>
+                    </ul>
+                </fieldset>
+
+                <hr class="vertical-line">
+            </aside>
+
+            
+
+            <section class="catalog__products" aria-labelledby="products-heading">
+                <form class="catalog__search" role="search" aria-label="Search products">
+                    <input type="search" id="catalog-search" class="catalog__search-input" placeholder="Search products by name" aria-label="Search products">
+                    <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+                </form>
+                <template id="product-card-template">
+                    <li class="catalog__product-item">
+                        <figure class="catalog__product-figure">
+                            <img class="catalog__product-img" width="300" height="300">
+                        </figure>
+                        <h3 class="catalog__product-name"></h3>
+                        <p class="catalog__product-price"></p>
+                    </li>
+                </template>
+                <ul class="catalog__product-list" role="list"></ul>
+            </section>
+        </div>
+
+        <section class="newsletter" aria-labelledby="newsletter-heading">
+            <h2 id="newsletter-heading" class="newsletter__heading">Join our Newsletter</h2>
+            <p class="newsletter__text">Sign up for our email newsletter to get exclusive discounts, updates, and more</p>
+            <form class="newsletter__form" action="#" method="post" aria-label="Newsletter signup">
+                <label for="newsletter-email" class="newsletter__label">Email address</label>
+                <input type="email" id="newsletter-email" class="newsletter__input" placeholder="Enter your email" required autocomplete="email">
+                <button type="submit" class="newsletter__submit">Subscribe <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></button>
+            </form>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <section class="footer__brand" aria-labelledby="footer-brand">
+            <h2 id="footer-brand" class="footer__logo">Nostra</h2>
+            <p class="footer__desc">Nostra brings you curated fashion for every occasion – summer, beach, and party. Shop authentic styles with fast, free shipping.</p>
+            <ul class="footer__social" role="list">
+                <li class="footer__social-item"><a href="#" class="footer__social-link" aria-label="Instagram"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a></li>
+                <li class="footer__social-item"><a href="#" class="footer__social-link" aria-label="Twitter"><i class="fa-brands fa-twitter" aria-hidden="true"></i></a></li>
+                <li class="footer__social-item"><a href="#" class="footer__social-link" aria-label="Facebook"><i class="fa-brands fa-facebook" aria-hidden="true"></i></a></li>
+            </ul>
+        </section>
+        <p class="footer__copyright">&copy; 2025 Nostra. All rights reserved.</p>
+    </footer>
+
+    <script src="./js/script.js" defer></script>
+</body>
+
+</html>
